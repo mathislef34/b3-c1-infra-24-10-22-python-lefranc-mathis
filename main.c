@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
     in_file = fopen("../main_res.txt", "w+");
     if (in_file != NULL)
     { 
-        fprintf(in_file, "%d", mat3);
+        fprintf("%d", mat3);
         fclose(in_file);
     }
     return 0;
