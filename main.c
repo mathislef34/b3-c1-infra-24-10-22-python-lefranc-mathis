@@ -48,10 +48,18 @@ void AffichageMatrice(int *mat)
 }
 
 int main(int argc, char *argv[])
-{
+{ 
     int* mat1 = malloc(12*sizeof(int));
     int* mat2 = malloc(12*sizeof(int));
     int* mat3 = malloc(12*sizeof(int));
+    
+    FILE* fichier = NULL;
+    fichier = fopen("test.txt", "w");
+    if (fichier != NULL)
+    {
+        fprintf(fichier, "%d", *mat3);
+        fclose(fichier);
+    }
 
     mat1 = ImportMatrice("../../texte/matrice1.txt");
     mat2 = ImportMatrice("../../texte/matrice2.txt");
