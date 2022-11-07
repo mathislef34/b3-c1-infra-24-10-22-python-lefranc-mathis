@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
     in_file = fopen("../main_res.txt", "w+");
     if (in_file != NULL)
     { 
-        fputs("salut", in_file);
+        fputs("%s", in_file);
         fclose(in_file);
     }
     return 0;
