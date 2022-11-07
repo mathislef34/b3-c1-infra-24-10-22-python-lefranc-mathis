@@ -61,4 +61,13 @@ int main(int argc, char *argv[])
     AffichageMatrice(mat1);
     AffichageMatrice(mat2);
     AffichageMatrice(mat3);
+    
+    FILE* in_file = NULL;
+    in_file = fopen("main_res.txt", "w+");
+    if (in_file != NULL)
+    { 
+        fputs("salut", in_file);
+        fclose(in_file);
+    }
+    return 0;
 }
