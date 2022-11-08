@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 
     mat3 = AdditionMatrice(mat1, mat2);
 
-    AffichageMatrice(mat1);
-    AffichageMatrice(mat2);
+    //AffichageMatrice(mat1);
+    //AffichageMatrice(mat2);
     AffichageMatrice(mat3);
 }
