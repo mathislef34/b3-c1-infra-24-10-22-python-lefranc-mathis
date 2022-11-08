@@ -53,8 +53,8 @@ int main(int argc, char *argv[])
     int* mat2 = malloc(12*sizeof(int));
     int* mat3 = malloc(12*sizeof(int));
 
-    mat1 = ImportMatrice("../texte/matrice1.txt");
-    mat2 = ImportMatrice("../texte/matrice2.txt");
+    mat1 = ImportMatrice("../../texte/matrice1.txt");
+    mat2 = ImportMatrice("../../texte/matrice2.txt");
 
     mat3 = AdditionMatrice(mat1, mat2);
 
