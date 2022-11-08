@@ -41,24 +41,28 @@ void AffichageMatrice(int *mat)
     // afficher la matrice ligne à ligne vers la sortie standard
     for (ligne=0; ligne < 3; ligne++)
     {
-        printf("%d %d %d %d\n" , *(mati+0), *(mati+1), *(mati+2), *(mati+3) );
+        printf("%d %d %d %d\n" , *(mati+0), *(mati+1), *(mati+2), *(mati+3));
         mati = mati + 4;
     }
     printf("\n");
 }
 
 int main(int argc, char *argv[])
-{ 
+{
     int* mat1 = malloc(12*sizeof(int));
     int* mat2 = malloc(12*sizeof(int));
     int* mat3 = malloc(12*sizeof(int));
 
-    mat1 = ImportMatrice("../../texte/matrice1.txt");
-    mat2 = ImportMatrice("../../texte/matrice2.txt");
+    mat1 = ImportMatrice("../texte/matrice1.txt");
+    mat2 = ImportMatrice("../texte/matrice2.txt");
 
     mat3 = AdditionMatrice(mat1, mat2);
 
     AffichageMatrice(mat1);
     AffichageMatrice(mat2);
     AffichageMatrice(mat3);
+
+    free(mat1);
+    free(mat2);
+    free(mat3);
 }
